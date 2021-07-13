@@ -14,7 +14,8 @@ public class Person {
      * Medical Bill object
      */
     private MedicalProcedureAPI medicalBill;
-       
+    private MedicalBill bill;
+    
     public Person() {
         super();
     }
@@ -25,6 +26,7 @@ public class Person {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.bill = new MedicalBill();
 	}
 
 	/**
@@ -98,6 +100,8 @@ public class Person {
         regularPatient = new XRAY(new MRI(regularPatient)); 
         dan.setMedicalBill(regularPatient);
         
+        dan.bill.addItems(regularPatient);
+        
         /**
          * show all patient information with billing statement
          */
@@ -110,10 +114,23 @@ public class Person {
          * (TO BE COMPLETED BY STUDENT)
          */
         
+        ItemAPI toothpaste = new ToothPaste();
+        ItemAPI tylenol = new Tylenol();
+//        
+//        regularPatient = new MiscellaneousAdapter(toothpaste);
+//        regularPatient = new MiscellaneousAdapter(tylenol);
+        
+        dan.bill.addItems(new MiscellaneousAdapter(toothpaste));
+        dan.bill.addItems(new MiscellaneousAdapter(tylenol));
+        
+//        dan.bill.addItems(regularPatient);
+        
+        System.out.println(dan.bill);
+        
         /**
          * show all patient information with billing statement
          */
-        System.out.println(dan);
+//        System.out.println(dan);
         
         System.out.println("\n\t" + Person.class.getName() + ".demo()... done!");
     }
