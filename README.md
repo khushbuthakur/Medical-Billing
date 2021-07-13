@@ -8,3 +8,6 @@ Use design patterns to write a program which models this experience, specificall
 3. Complete the supplied Person class (partial code below) with Person demo() method to demonstrate your completed model (Driver will call Person.demo() method).
 4. Using supplied MedicalProcedureAPI interface (code below), implement MRI and XRAY using appropriate design pattern;
 5. Using the supplied ItemAPI (partial code below), design and implement ToothPaste and Tylenol using appropriate design pattern;
+
+
+![Output](https://github.com/khushbuthakur/Medical-Billing/blob/main/Screenshot%202021-07-13%20at%207.36.44%20AM.png)
